@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/fontello.css">
+</head>
+<body class="body2">
+    <div id="wrap-title">
+        <a href="#"><img src="img/logo.png" width="40" height="40">Steel</a>
+       </div>
+    <header>
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu" class="icon-menu"></label>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="guia.html">Guia de Estilo</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+        </nav>
+    </header>
+       
+        <h1>Click en la foto para ver los trabajos :</h1>
+        <h5>Trabajo de Despliege de Aplicaciones en PDF:</h5>
+        <input type="button" value="Ver Pop Up de Desplieges Web PDFS" onclick="pop1()">
+        <h5>Trabajo de DNS en ODT:</h5>
+        <input type="button" value="Ver Pop Up de DNS PDFS" onclick="pop2()">
+        <h5>Trabajo de LDAP en ODT:</h5>
+        <input type="button" value="Ver Pop Up de LDAP PDFS" onclick="pop3()">
+       
+       
+        <div>
+            <div >
+                <dl>
+                    <dt>Calculadora</dt>
+                    <dd>
+                      <a title="calculadora" href="js/calculadora.html">
+                        <img src="img/imagen_calculadora.jpg" alt="calculadora" width="100%" height="100%">
+                       </a></dd>
+                       
+                  </dl>
+                  <input type="button" value="Ver Pop Up de Calculadora" onclick="pop()">
+    
+            </div>
+            <div >
+                
+              <dl>
+                <dt>Cajas de Colores</dt>
+                <dd>
+                    <a title="Cajas" href="div.html">
+                        <img src="img/imagen_caja.jpg" alt="Cajas" width="100%" height="100%">
+                       </a></dd>
+                </dd>
+              </dl>
+              
+            </div>
+            <div>
+                <dl>
+                    <dt>Adobe XD</dt>
+                    <dd>
+                        <a title="video" href="media/videoAdobexd.html">
+                            <img src="img/imagen_xd.jpg" alt="video" width="150%" height="100%">
+                           </a></dd>
+                    </dd>
+                  </dl>
+        
+    
+            </div>
+            <div >
+                <dl>
+                    <dt>Trabajos</dt>
+                    <dd>
+                        <a title="trabajo" href="js/trabajo.html">
+                            <img src="img/imagen_trabajo.jpg" alt="trabajo" width="100%" height="100%">
+                           </a></dd>
+                    </dd>
+                  </dl>
+                  
+            </div>
+               
+        </div>
+     
+    <footer>
+        <div id="wrap-footer">
+            <p>
+                &copy; Eva Moreno <br>
+                correo : evamnore@hotmail.com
+            </p>
+        </div>
+    </footer>
+    <script type="text/javascript">
+       window.onload=function(){alert('** Bienvenidos al Portafolio **');}
+        function pop(){
+            window.open("js/calculadora.html","","width=600%,height=600%");
+        }
+        function pop1(){
+            window.open("media/Ejercicio de Despliege.pdf","","width=600%,height=600%");
+        }
+        function pop2(){
+            window.open("media/DNS.odt","","width=600%,height=600%");
+        }
+        function pop3(){
+            window.open("media/LDAP.odt","","width=600%,height=600%");
+        }
+      </script>
+</body>
+</html>

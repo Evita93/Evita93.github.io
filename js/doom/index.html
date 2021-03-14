@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var fontSize = 1;
+
+        // funcion para aumentar la fuente
+
+        function zoomIn() {
+
+            fontSize += 0.1;
+
+            document.body.style.fontSize = fontSize + "em";
+
+        }
+
+        // funcion para disminuir la fuente
+
+        function zoomOut() {
+
+            fontSize -= 0.1;
+
+            document.body.style.fontSize = fontSize + "em";
+
+        }
+
+    </script>
+</head>
+<body>
+    <header>
+
+        <button onclick="zoomIn()">Click aqui para Aumentar<br> </button> 
+        <button onclick="zoomOut()">Click aqui para Disminuir</button>
+
+    </header>
+
+    <div class="fuente1">
+        <h2>Titulo</h2>
+        Texto de ejemplo.
+
+        
+
+    </div>
+
+    <div class="fuente2">
+
+        <h2>Titulo</h2>
+        Texto de ejemplo.
+
+    </div>
+</body>
+</html>

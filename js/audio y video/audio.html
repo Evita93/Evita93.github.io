@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<audio id="myAudio" controls>
+  <source src="piano-triste-1-.mp3" type="audio/ogg">
+  <source src="piano-triste-1-.mp3" type="audio/mpeg">
+  
+</audio><br>
+
+<button onclick="enableControls()" type="button">Habilitar control</button>
+<button onclick="disableControls()" type="button">Deshabilitar controls</button>
+<button onclick="checkControls()" type="button">Verificar el estado de los controles</button>
+
+
+<script>
+var x = document.getElementById("myAudio");
+function enableControls() { 
+  x.controls = true;
+  x.load();
+} 
+
+function disableControls() { 
+  x.controls = false;
+  x.load();
+} 
+ 
+function checkControls() { 
+  alert(x.controls);
+} 
+</script> 
+
+</body> 
+</html>

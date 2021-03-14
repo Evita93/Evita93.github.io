@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajos</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/reloj.css">
+</head>
+<body>
+    <div>
+        <h4>Reloj Analógico :</h4>
+        <div class="clock">
+
+            <div class="hour">
+                <div class="hr" id="hr" style="transform: rotateZ(447deg);">
+                    
+                </div>
+            </div>
+
+            <div class="min">
+                <div class="mn" id="mn" style="transform: rotateZ(324deg);">
+                    <h4>Tic Tac</h4>
+                    </div>
+    	
+           </div>
+
+</div>
+        <div>
+            <h4>Fecha Actual :</h4>
+            <div id="fechahoy"></div>
+        </div>
+        <div>
+            <h4>On Mouse : </h4>
+            <div class="onmouse">
+                <a href="#" onMouseOver="pintar('#f00')" onMouseOut="pintar('#000')">Rojo</a> -
+                <a href="#" onMouseOver="pintar('#0f0')" onMouseOut="pintar('#000')">Verde</a> -
+                <a href="#" onMouseOver="pintar('#00f')" onMouseOut="pintar('#000')">Azul</a>
+                <div id="cuadrado1" style="background:#000;width:200px;height:200px"></div><br>
+                <a href="ajax/index.html" style="text-align: center;" >Click para ver trabajo AJAX</a><br><br>
+                <a href="doom/index.html" style="text-align: center;" >Click para ver trabajo DOM</a><br><br>
+                <a href="audio y video/audio.html" style="text-align: center;" >Click para ver trabajo de AUDIO</a><br><br>
+                <a href="audio y video/video.html" style="text-align: center;" >Click para ver trabajo de VIDEO</a>
+            </div>
+            
+           
+        </div>
+       
+        
+      
+    <script>
+        window.onload=function(){alert('Aqui algunos de los trabajos hechos en javascript');}
+        window.onunload=function(){alert('Vuelva en otro momento');}
+        
+         // for time;
+         const deg = 6; 
+            // 360 / (12 * 5);
+
+            const hr = document.querySelector('#hr');
+            const mn = document.querySelector('#mn');
+            const sc = document.querySelector('#sc');
+
+            setInterval(() => {
+                
+                let day = new Date();
+                let hh = day.getHours() * 30;
+                let mm = day.getMinutes() * deg;
+                let ss = day.getSeconds() * deg;
+                let msec = day.getMilliseconds();
+                
+                // VERY IMPORTANT STEP:
+                
+                hr.style.transform = `rotateZ(${(hh) + (mm / 12)}deg)`;
+                mn.style.transform = `rotateZ(${mm}deg)`;
+                sc.style.transform = `rotateZ(${ss}deg)`;
+                
+                // gives the smooth transitioning effect, but there's a bug here!
+                // sc.style.transition = `1s`;
+
+            })
+
+            var d=new Date();var month=new Array(12);month[0]='Enero';month[1]='Febrero';month[2]='Marzo';month[3]='Abril';month[4]='Mayo';month[5]='Junio';month[6]='Julio';month[7]='Agosto';month[8]='Septiembre';month[9]='Octubre';month[10]='Noviembre';month[11]='Diciembre';var todaysDate=+d.getDate()+' de '+month[d.getUTCMonth()]+' del '+d.getUTCFullYear();
+            document.getElementById('fechahoy').innerHTML='Hoy es: '+todaysDate;
+    </script>
+   <script>
+    // seccion de codigo javascript 
+    function pintar(col)
+    {
+      document.getElementById('cuadrado1').style.backgroundColor=col;
+    }
+  </script>
+</body>
+</html>
